@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:to_do_app/to_do_page.dart';
+import 'package:to_do_app/provider_to_do_page.dart';
+// import 'package:to_do_app/to_do_page.dart';
 
 void main() async {
   // Intialize the Hive 
@@ -8,7 +10,7 @@ void main() async {
 
   // Open the MyBox Database
   await Hive.openBox('MyBox');
-  runApp(const ToDoApp());
+  runApp(const ProviderScope(child: ToDoApp()));
 }
 
 
@@ -22,7 +24,7 @@ class ToDoApp extends StatelessWidget {
             primarySwatch: Colors.yellow,
         ),
         debugShowCheckedModeBanner: false,
-        home: const TODoPage(),
+        home: const TODoPageUsingProvider(),
     );
   }
 }
