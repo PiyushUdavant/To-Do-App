@@ -1,7 +1,6 @@
 # to_do_app
 
-A new Flutter project.
-
+A new Flutter project. Remember to use the app without RiverPod , call ToDoPage from main.dart file.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
